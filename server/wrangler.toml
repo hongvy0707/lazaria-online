@@ -1,0 +1,23 @@
+# May chu LazyEyes: 1 Worker nhan ket noi, 1 Durable Object "World" cho moi ban do (hien co Dao Binh Minh).
+# Goi mien phi cua Cloudflare dung duoc Durable Object loai SQLite (new_sqlite_classes).
+name = "lazyeyes-server"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[[durable_objects.bindings]]
+name = "WORLD"
+class_name = "World"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["World"]
+
+[vars]
+# EXP x5 de thu nhanh nhu ban choi thu; doi thanh "1" khi muon toc do that
+EXP_RATE = "5"
+# Trang duoc phep tao nhan vat (dau * = moi trang). Vi du: "https://lazyeyes.pages.dev"
+ALLOWED_ORIGIN = "https://demon-lazar.hongvy0707.workers.dev"
+# Gia do o cua hang trong giai doan thu = gia that x so nay (gia that 50 Bac moi mon Thuong bac 1)
+SHOP_RATE = "0.05"
+# Lenh thu (doi cap, dich chuyen): chi bat trong wrangler.dev.toml khi chay tren may, KHONG bat o day
+DEV = "0"

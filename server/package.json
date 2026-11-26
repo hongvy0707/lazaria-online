@@ -1,0 +1,14 @@
+{
+  "name": "lazyeyes-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "May chu choi thu nhieu nguoi cho LazyEyes (Dao Binh Minh): Cloudflare Worker + Durable Object",
+  "scripts": {
+    "dev": "wrangler dev -c wrangler.dev.toml",
+    "deploy": "wrangler deploy",
+    "test": "node test/smoke.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

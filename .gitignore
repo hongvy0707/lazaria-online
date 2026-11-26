@@ -1,0 +1,10 @@
+.wrangler/
+node_modules/
+.dev.vars
+.env*
+.claude/settings.local.json
+__pycache__/
+*.pyc
+~$*
+Thumbs.db
+desktop.ini
